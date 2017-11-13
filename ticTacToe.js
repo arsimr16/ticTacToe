@@ -30,27 +30,14 @@ var ticTacToe = () => {
       }
     }
     // check columns
-    if (this.board[0][0] === 'x' && this.board[1][0] === 'x' && this.board[2][0] === 'x') {
+    var column0 = this.board[0][0] + this.board[1][0] + this.board[2][0];
+    var column1 = this.board[0][1] + this.board[1][1] + this.board[1][1];
+    var column2 = this.board[0][2] + this.board[1][2] + this.board[2][2];
+    if (column0 === 'xxx' || column1 = 'xxx' || column2 = 'xxx') {
       console.log('player1 wins!');
       this.gameOver = true;
       return;
-    } else if (this.board[0][1] === 'x' && this.board[1][1] === 'x' && this.board[2][1] === 'x') {
-      console.log('player1 wins!');
-      this.gameOver = true;
-      return;
-    } else if (this.board[0][2] === 'x' && this.board[1][2] === 'x' && this.board[2][2] === 'x') {
-      console.log('player1 wins!');
-      this.gameOver = true;
-      return;
-    } else if (this.board[0][0] === 'o' && this.board[1][0] === 'o' && this.board[2][0] === 'o') {
-      console.log('player2 wins!');
-      this.gameOver = true;
-      return;
-    } else if (this.board[0][1] === 'o' && this.board[1][1] === 'o' && this.board[2][1] === 'o') {
-      console.log('player2 wins!');
-      this.gameOver = true;
-      return;
-    } else if (this.board[0][2] === 'o' && this.board[1][2] === 'o' && this.board[2][2] === 'o') {
+    } else if (column0 === 'ooo' || column1 = 'ooo' || column2 = 'ooo') {
       console.log('player2 wins!');
       this.gameOver = true;
       return;
