@@ -7,6 +7,13 @@ var ticTacToe = () => {
   this.player1 = 'x';
   this.player2 = 'o';
   this.player1Turn = true; // when false, it is player2's turn
+  this.turn = () => {
+    // accept input from current player
+    // add input to proper position on board
+    // redraw the board to the console
+    // check for wins
+    // this.player1Turn = !this.player1Turn
+  }
   this.gameOver = false;
   this.checkForWin = (board) => {
     // check rows
